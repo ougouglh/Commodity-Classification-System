@@ -34,10 +34,10 @@ cp .env.example .env
 LLM_PROVIDER=openai
 
 # 模型名称
-# OpenAI: gpt-3.5-turbo, gpt-4o
+# OpenAI: gpt-5.5
 # Yi: yi-large, yi-medium
 # 自定义: 根据你的 API 提供商填写
-LLM_MODEL=gpt-3.5-turbo
+LLM_MODEL=glm
 
 # API 密钥
 OPENAI_API_KEY=sk-your-api-key-here
