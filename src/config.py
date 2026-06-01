@@ -123,6 +123,11 @@ class Config:
     def FAISS_INDEX_TYPE(self):
         return self._get_env('FAISS_INDEX_TYPE', 'flat')
 
+    @property
+    def HYBRID_ALPHA(self):
+        """混合检索中向量检索的权重 (0-1)，BM25权重为 1-alpha"""
+        return float(self._get_env('HYBRID_ALPHA', '0.7'))
+
     def ensure_dirs(self):
         """确保所有必需的目录存在"""
         self.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
